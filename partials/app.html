@@ -1,0 +1,21 @@
+<div class="card search">
+  <h1 class="search-headline">Contacts Directory</h1>
+  <label class="search-label">search
+    <span *ngIf="query"
+      [innerHTML]="' for: ' + query"></span></label>
+    <input class="search-input"
+      [(ngModel)]="query" placeholder="type in name or location here">
+</div><!-- card search -->
+
+<ul class="contactlist cf"
+  *ngIf="query">
+  <li class="contactlist-item cf"
+    (click)="showContact(item); query=''"
+    *ngFor="let item of (contacts | search: query)">
+    <contact-item class="content" [contact]="item"></contact-item>
+  </li>
+</ul>
+
+<contact-details 
+  *ngIf="currentContact"
+  [contact]="currentContact"></contact-details>

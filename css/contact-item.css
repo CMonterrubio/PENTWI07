@@ -1,0 +1,27 @@
+/* ---------------------- */
+/* contact-item.css Styles */
+/* ---------------------- */
+
+.contact-img {
+  width: 60px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.contact-info {
+  display: block;
+  margin: 5px 0;
+}
+
+.contact-info .contact-name {
+  font-size: 1.4rem; 
+  margin-top: 0;
+}
+
+.contact-info .contact-reknown {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0;
+}
